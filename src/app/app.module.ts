@@ -7,15 +7,20 @@ import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { TestService } from './services/test.service';
 import { Test2Service } from './services/test2.service';
+import { CoreModule } from './core/core.module';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent
+    TestComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoreModule
   ],
   providers: [TestService , Test2Service ],
   bootstrap: [AppComponent]
