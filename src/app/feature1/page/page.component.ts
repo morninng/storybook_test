@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CoreService } from '../../core/core.service';
 
 
@@ -10,10 +10,12 @@ import { CoreService } from '../../core/core.service';
 })
 export class PageComponent implements OnInit {
 
-  constructor(private creService: CoreService) { }
+  @Input() fff;
+
+  constructor(private coreService: CoreService) { }
 
   ngOnInit() {
-    this.creService.do();
+    this.coreService.do();
   }
 
 }

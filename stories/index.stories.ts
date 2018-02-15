@@ -9,6 +9,10 @@ import { Test2Service } from './../src/app/services/test2.service';
 
 
 import { TestComponent } from './../src/app/test/test.component';
+import { PageComponent } from '../src/app/feature1/page/page.component';
+
+import {SharedComponent} from './../src/app/shared/shared/shared.component';
+import { CoreService } from '../src/app/core/core.service';
 
 
 storiesOf('Test', module)
@@ -20,7 +24,7 @@ storiesOf('Test', module)
     moduleMetadata: {
       imports: [],
       schemas: [],
-      declarations: [],
+      declarations: [SharedComponent],
       providers: [TestService , Test2Service ]
     }
   }))
@@ -32,10 +36,27 @@ storiesOf('Test', module)
     moduleMetadata: {
       imports: [],
       schemas: [],
-      declarations: [],
+      declarations: [SharedComponent],
       providers: [TestService , Test2Service ]
     }
   }));
+
+
+
+  storiesOf('Test2', module)
+  .add('bbb', () => ({
+    component: PageComponent,
+    props: {
+      fff: 'jjjjjjjsj',
+    },
+    moduleMetadata: {
+      imports: [],
+      schemas: [],
+      declarations: [SharedComponent],
+      providers: [CoreService]
+    }
+  }));
+
 
 
 //       props: {

@@ -10,6 +10,7 @@ export class SharedComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log('SharedComponent init');
   }
 
 }
